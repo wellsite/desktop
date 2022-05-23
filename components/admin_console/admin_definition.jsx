@@ -262,7 +262,7 @@ const AdminDefinition = {
                 'admin.license.edition',
                 'admin.license.type',
                 'admin.license.key',
-                'Mattermost Enterprise Edition. Unlock enterprise features in this software through the purchase of a subscription from ',
+                'Wellsite Enterprise Edition. Unlock enterprise features in this software through the purchase of a subscription from ',
                 'This software is offered under a commercial license.\n\nSee ENTERPRISE-EDITION-LICENSE.txt in your root install directory for details. See NOTICE.txt for information about open source software used in this system.',
             ],
             isHidden: it.not(it.userHasReadPermissionOnResource(RESOURCE_KEYS.ABOUT.EDITION_AND_LICENSE)),
@@ -680,7 +680,7 @@ const AdminDefinition = {
                         label: t('admin.service.siteURL'),
                         label_default: 'Site URL:',
                         help_text: t('admin.service.siteURLDescription'),
-                        help_text_default: 'The URL that users will use to access Mattermost. Standard ports, such as 80 and 443, can be omitted, but non-standard ports are required. For example: http://example.com:8065. This setting is required.\n \nMattermost may be hosted at a subpath. For example: http://example.com:8065/company/mattermost. A restart is required before the server will work correctly.',
+                        help_text_default: 'The URL that users will use to access Wellsite. Standard ports, such as 80 and 443, can be omitted, but non-standard ports are required. For example: http://example.com:8065. This setting is required.\n \nMattermost may be hosted at a subpath. For example: http://example.com:8065/company/mattermost. A restart is required before the server will work correctly.',
                         help_text_markdown: true,
                         placeholder: t('admin.service.siteURLExample'),
                         placeholder_default: 'E.g.: "http://example.com:8065"',
@@ -708,7 +708,7 @@ const AdminDefinition = {
                         placeholder: t('admin.service.listenExample'),
                         placeholder_default: 'E.g.: ":8065"',
                         help_text: t('admin.service.listenDescription'),
-                        help_text_default: 'The address and port to which to bind and listen. Specifying ":8065" will bind to all network interfaces. Specifying "127.0.0.1:8065" will only bind to the network interface having that IP address. If you choose a port of a lower level (called "system ports" or "well-known ports", in the range of 0-1023), you must have permissions to bind to that port. On Linux you can use: "sudo setcap cap_net_bind_service=+ep ./bin/mattermost" to allow Mattermost to bind to well-known ports.',
+                        help_text_default: 'The address and port to which to bind and listen. Specifying ":8065" will bind to all network interfaces. Specifying "127.0.0.1:8065" will only bind to the network interface having that IP address. If you choose a port of a lower level (called "system ports" or "well-known ports", in the range of 0-1023), you must have permissions to bind to that port. On Linux you can use: "sudo setcap cap_net_bind_service=+ep ./bin/mattermost" to allow Wellsite to bind to well-known ports.',
                         isDisabled: it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.ENVIRONMENT.WEB_SERVER)),
                     },
                     {
@@ -855,7 +855,7 @@ const AdminDefinition = {
                         label: t('admin.service.managedResourcePaths'),
                         label_default: 'Managed Resource Paths:',
                         help_text: t('admin.service.managedResourcePathsDescription'),
-                        help_text_default: 'A comma-separated list of paths on the Mattermost server that are managed by another service. See [here](!https://docs.mattermost.com/install/desktop-managed-resources.html) for more information.',
+                        help_text_default: 'A comma-separated list of paths on the Wellsite server that are managed by another service. See [here](!https://docs.mattermost.com/install/desktop-managed-resources.html) for more information.',
                         help_text_markdown: true,
                         isDisabled: it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.ENVIRONMENT.WEB_SERVER)),
                     },
@@ -866,7 +866,7 @@ const AdminDefinition = {
                         label: t('admin.reload.button'),
                         label_default: 'Reload Configuration From Disk',
                         help_text: t('admin.reload.reloadDescription'),
-                        help_text_default: 'Deployments using multiple databases can switch from one master database to another without restarting the Mattermost server by updating "config.json" to the new desired configuration and using the {featureName} feature to load the new settings while the server is running. The administrator should then use the {recycleDatabaseConnections} feature to recycle the database connections based on the new settings.',
+                        help_text_default: 'Deployments using multiple databases can switch from one master database to another without restarting the Wellsite server by updating "config.json" to the new desired configuration and using the {featureName} feature to load the new settings while the server is running. The administrator should then use the {recycleDatabaseConnections} feature to recycle the database connections based on the new settings.',
                         help_text_values: {
                             featureName: (
                                 <b>
@@ -1081,7 +1081,7 @@ const AdminDefinition = {
                         help_text: t('admin.image.amazonS3BucketDescription'),
                         help_text_default: 'Name you selected for your S3 bucket in AWS.',
                         placeholder: t('admin.image.amazonS3BucketExample'),
-                        placeholder_default: 'E.g.: "mattermost-media"',
+                        placeholder_default: 'E.g.: "wellsite-media"',
                         isDisabled: it.any(
                             it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.ENVIRONMENT.FILE_STORAGE)),
                             it.not(it.stateEquals('FileSettings.DriverName', FILE_STORAGE_DRIVER_S3)),
@@ -1417,7 +1417,7 @@ const AdminDefinition = {
                         label: t('admin.environment.smtp.skipServerCertificateVerification.title'),
                         label_default: 'Skip Server Certificate Verification:',
                         help_text: t('admin.environment.smtp.skipServerCertificateVerification.description'),
-                        help_text_default: 'When true, Mattermost will not verify the email server certificate.',
+                        help_text_default: 'When true, Wellsite will not verify the email server certificate.',
                         isDisabled: it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.ENVIRONMENT.SMTP)),
                     },
                     {
@@ -1654,7 +1654,7 @@ const AdminDefinition = {
                         label: t('admin.log.fileTitle'),
                         label_default: 'Output logs to file: ',
                         help_text: t('admin.log.fileDescription'),
-                        help_text_default: 'Typically set to true in production. When true, logged events are written to the mattermost.log file in the directory specified in the File Log Directory field. The logs are rotated at 100 MB and archived to a file in the same directory, and given a name with a datestamp and serial number. For example, mattermost.2017-03-31.001. Changing this setting requires a server restart before taking effect.',
+                        help_text_default: 'Typically set to true in production. When true, logged events are written to the wellsite.log file in the directory specified in the File Log Directory field. The logs are rotated at 100 MB and archived to a file in the same directory, and given a name with a datestamp and serial number. For example, wellsite.2017-03-31.001. Changing this setting requires a server restart before taking effect.',
                         isDisabled: it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.ENVIRONMENT.LOGGING)),
                     },
                     {
@@ -1688,7 +1688,7 @@ const AdminDefinition = {
                         label: t('admin.log.locationTitle'),
                         label_default: 'File Log Directory:',
                         help_text: t('admin.log.locationDescription'),
-                        help_text_default: 'The location of the log files. If blank, they are stored in the ./logs directory. The path that you set must exist and Mattermost must have write permissions in it. Changing this setting requires a server restart before taking effect.',
+                        help_text_default: 'The location of the log files. If blank, they are stored in the ./logs directory. The path that you set must exist and Wellsite must have write permissions in it. Changing this setting requires a server restart before taking effect.',
                         placeholder: t('admin.log.locationPlaceholder'),
                         placeholder_default: 'Enter your file location',
                         isDisabled: it.any(
@@ -1721,7 +1721,7 @@ const AdminDefinition = {
                         label: t('admin.log.enableDiagnostics'),
                         label_default: 'Enable Diagnostics and Error Reporting:',
                         help_text: t('admin.log.enableDiagnosticsDescription'),
-                        help_text_default: 'Enable this feature to improve the quality and performance of Mattermost by sending error reporting and diagnostic information to Mattermost, Inc. Read our [privacy policy](!https://mattermost.com/privacy-policy/) to learn more.',
+                        help_text_default: 'Enable this feature to improve the quality and performance of Mattermost by sending error reporting and diagnostic information to Wellsite, Inc. Read our [privacy policy](!https://mattermost.com/privacy-policy/) to learn more.',
                         help_text_markdown: true,
                         onConfigSave: (displayVal, previousVal) => {
                             if (previousVal && previousVal !== displayVal) {
@@ -1786,7 +1786,7 @@ const AdminDefinition = {
                         label: t('admin.metrics.enableTitle'),
                         label_default: 'Enable Performance Monitoring:',
                         help_text: t('admin.metrics.enableDescription'),
-                        help_text_default: 'When true, Mattermost will enable performance monitoring collection and profiling. Please see [documentation](!https://docs.mattermost.com/deployment/metrics.html) to learn more about configuring performance monitoring for Mattermost.',
+                        help_text_default: 'When true, Wellsite will enable performance monitoring collection and profiling. Please see [documentation](!https://docs.mattermost.com/deployment/metrics.html) to learn more about configuring performance monitoring for Wellsite.',
                         help_text_markdown: true,
                         isDisabled: it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.ENVIRONMENT.PERFORMANCE_MONITORING)),
                     },
@@ -1882,7 +1882,7 @@ const AdminDefinition = {
                         label: t('admin.team.siteNameTitle'),
                         label_default: 'Site Name:',
                         help_text: t('admin.team.siteNameDescription'),
-                        help_text_default: 'Name of service shown in login screens and UI. When not specified, it defaults to "Mattermost".',
+                        help_text_default: 'Name of service shown in login screens and UI. When not specified, it defaults to "Wellsite".',
                         placeholder: t('admin.team.siteNameExample'),
                         placeholder_default: 'E.g.: "Mattermost"',
                         max_length: Constants.MAX_SITENAME_LENGTH,
@@ -1936,7 +1936,7 @@ const AdminDefinition = {
                         label: t('admin.support.enableAskCommunityTitle'),
                         label_default: 'Enable Ask Community Link:',
                         help_text: t('admin.support.enableAskCommunityDesc'),
-                        help_text_default: 'When true, "Ask the community" link appears on the Mattermost user interface and Help Menu, which allows users to join the Mattermost Community to ask questions and help others troubleshoot issues. When false, the link is hidden from users.',
+                        help_text_default: 'When true, "Ask the community" link appears on the Wellsite user interface and Help Menu, which allows users to join the Wellsite Community to ask questions and help others troubleshoot issues. When false, the link is hidden from users.',
                         isDisabled: it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.SITE.CUSTOMIZATION)),
                     },
                     {
@@ -1945,7 +1945,7 @@ const AdminDefinition = {
                         label: t('admin.support.helpTitle'),
                         label_default: 'Help Link:',
                         help_text: t('admin.support.helpDesc'),
-                        help_text_default: 'The URL for the Help link on the Mattermost login page, sign-up pages, and Help Menu. If this field is empty, the Help link is hidden from users.',
+                        help_text_default: 'The URL for the Help link on the Wellsite login page, sign-up pages, and Help Menu. If this field is empty, the Help link is hidden from users.',
                         isDisabled: it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.SITE.CUSTOMIZATION)),
                     },
                     {
@@ -1954,7 +1954,7 @@ const AdminDefinition = {
                         label: t('admin.support.termsTitle'),
                         label_default: 'Terms of Use Link:',
                         help_text: t('admin.support.termsDesc'),
-                        help_text_default: 'Link to the terms under which users may use your online service. By default, this includes the "Mattermost Conditions of Use (End Users)" explaining the terms under which Mattermost software is provided to end users. If you change the default link to add your own terms for using the service you provide, your new terms must include a link to the default terms so end users are aware of the Mattermost Conditions of Use (End User) for Mattermost software.',
+                        help_text_default: 'Link to the terms under which users may use your online service. By default, this includes the "Wellsite Conditions of Use (End Users)" explaining the terms under which Mattermost software is provided to end users. If you change the default link to add your own terms for using the service you provide, your new terms must include a link to the default terms so end users are aware of the Mattermost Conditions of Use (End User) for Mattermost software.',
                         isDisabled: it.not(it.userHasWritePermissionOnResource(RESOURCE_KEYS.SITE.CUSTOMIZATION)),
                         isHidden: it.configIsTrue('ExperimentalSettings', 'RestrictSystemAdmin'),
                     },

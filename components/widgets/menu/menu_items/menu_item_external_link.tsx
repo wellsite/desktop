@@ -1,6 +1,7 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
+import { configObservables } from 'localforage';
 import React from 'react';
 
 import menuItem from './menu_item';

@@ -24,7 +24,7 @@ describe('Main menu', () => {
 
     it('MM-T913 About opens About modal', () => {
         // # click to open about modal
-        cy.findByText('About Mattermost').click();
+        cy.findByText('About Wellsite').click();
 
         // * Verify server link text has correct link destination and opens in a new tab
         verifyLink('server', 'https://github.com/mattermost/mattermost-server/blob/master/NOTICE.txt');
@@ -36,7 +36,7 @@ describe('Main menu', () => {
         verifyLink('mobile', 'https://github.com/mattermost/mattermost-mobile/blob/master/NOTICE.txt');
 
         // * Verify version exists in modal
-        cy.findByText('Mattermost Version:').should('be.visible');
+        cy.findByText('Wellsite Version:').should('be.visible');
 
         // * Verify licensed to exists in modal
         cy.findByText('Licensed to:').should('be.visible');

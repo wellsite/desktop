@@ -87,14 +87,14 @@ export default class AboutBuildModal extends React.PureComponent<Props, State> {
             <div>
                 <FormattedMessage
                     id='about.teamEditionLearn'
-                    defaultMessage='Join the Mattermost community at '
+                    defaultMessage='Join the Wellsite community at '
                 />
                 <a
                     target='_blank'
                     rel='noopener noreferrer'
                     href='https://mattermost.com/community/'
                 >
-                    {'mattermost.com/community/'}
+                    {'wellsite.com/community/'}
                 </a>
             </div>
         );
@@ -213,7 +213,7 @@ export default class AboutBuildModal extends React.PureComponent<Props, State> {
                     >
                         <FormattedMessage
                             id='about.title'
-                            values={{appTitle: config.SiteName || 'Mattermost'}}
+                            values={{appTitle: 'Wellsite'}}
                             defaultMessage='About {appTitle}'
                         />
                     </Modal.Title>
@@ -225,14 +225,14 @@ export default class AboutBuildModal extends React.PureComponent<Props, State> {
                         </div>
                         <div>
                             <h3 className='about-modal__title'>
-                                <strong>{'Mattermost'} {title}</strong>
+                                <strong>{'Wellsite'} {title}</strong>
                             </h3>
                             <p className='about-modal__subtitle pb-2'>{subTitle}</p>
                             <div className='form-group less'>
                                 <div>
                                     <FormattedMessage
                                         id='about.version'
-                                        defaultMessage='Mattermost Version:'
+                                        defaultMessage='Wellsite Version:'
                                     />
                                     <span id='versionString'>{'\u00a0' + mmversion}</span>
                                 </div>
@@ -261,7 +261,7 @@ export default class AboutBuildModal extends React.PureComponent<Props, State> {
                             <div className='about-modal__copyright'>
                                 <FormattedMessage
                                     id='about.copyright'
-                                    defaultMessage='Copyright 2015 - {currentYear} Mattermost, Inc. All rights reserved'
+                                    defaultMessage='Copyright 2015 - {currentYear} Wellsite, Inc. All rights reserved'
                                     values={{
                                         currentYear: new Date().getFullYear(),
                                     }}
@@ -278,7 +278,7 @@ export default class AboutBuildModal extends React.PureComponent<Props, State> {
                         <p>
                             <FormattedMarkdownMessage
                                 id='about.notice'
-                                defaultMessage='Mattermost is made possible by the open source software used in our [server](!https://github.com/mattermost/mattermost-server/blob/master/NOTICE.txt), [desktop](!https://github.com/mattermost/desktop/blob/master/NOTICE.txt) and [mobile](!https://github.com/mattermost/mattermost-mobile/blob/master/NOTICE.txt) apps.'
+                                defaultMessage='Wellsite is made possible by the open source software used in our [server](!https://github.com/mattermost/mattermost-server/blob/master/NOTICE.txt), [desktop](!https://github.com/mattermost/desktop/blob/master/NOTICE.txt) and [mobile](!https://github.com/mattermost/mattermost-mobile/blob/master/NOTICE.txt) apps.'
                             />
                         </p>
                     </div>

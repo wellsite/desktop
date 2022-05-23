@@ -148,7 +148,7 @@ const defaultServerConfig: AdminConfig = {
         EnableCustomGroups: true,
     },
     TeamSettings: {
-        SiteName: 'Mattermost',
+        SiteName: 'Wellsite',
         MaxUsersPerTeam: 50,
         EnableUserCreation: true,
         EnableOpenServer: false,

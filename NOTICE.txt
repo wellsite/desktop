@@ -1,16 +1,16 @@
-Mattermost Web App
-© 2017-present Mattermost, Inc.  All Rights Reserved.  See LICENSE.txt for license information.
+Wellsite Web App
+© 2017-present Wellsite, Inc.  All Rights Reserved.  See LICENSE.txt for license information.
 
 NOTICES:
 --------
 
-This document includes a list of open source components used in Mattermost Web App, including those that have been modified.
+This document includes a list of open source components used in Wellsite Web App, including those that have been modified.
 
 --------
 
 ## @mattermost/compass-components
 
-This product contains '@mattermost/compass-components' by Mattermost.
+This product contains '@mattermost/compass-components' by Wellsite.
 
 The compass components package is the implementation of the compass design system meant (but not limited) to be used in the mattermost products: Messaging, Playbooks and Focalboard.
 

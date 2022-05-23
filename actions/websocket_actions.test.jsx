@@ -1019,7 +1019,7 @@ describe('handlePluginEnabled/handlePluginDisabled', () => {
     describe('handlePluginDisabled', () => {
         const baseManifest = {
             name: 'Demo Plugin',
-            description: 'This plugin demonstrates the capabilities of a Mattermost plugin.',
+            description: 'This plugin demonstrates the capabilities of a Wellsite plugin.',
             version: '0.2.0',
             min_server_version: '5.12.0',
             server: {

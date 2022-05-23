@@ -31,8 +31,8 @@ describe('Customization', () => {
         cy.findByTestId('TeamSettings.SiteNamelabel').scrollIntoView().should('be.visible').and('have.text', 'Site Name:');
 
         // # Update both Site Name and Description to store test values
-        const siteName = 'Mattermost_Text';
-        const siteDescription = 'This is a testing Mattermost site';
+        const siteName = 'Wellsite_Text';
+        const siteDescription = 'This is a testing Wellsite site';
         cy.findByTestId('TeamSettings.SiteNameinput').clear().type(siteName);
         cy.findByTestId('TeamSettings.CustomDescriptionTextinput').clear().type(siteDescription);
 
@@ -293,7 +293,7 @@ describe('Customization', () => {
         cy.findByTestId('TeamSettings.SiteNameinput').should('be.empty');
 
         // # Configure a custom Site Name
-        const siteName = 'MM-T1282';
+        const siteName = 'Wellsite';
         cy.findByTestId('TeamSettings.SiteNameinput').clear().type(siteName);
 
         // # Save setting
@@ -339,7 +339,7 @@ describe('Customization', () => {
         cy.visit('/admin_console/site_config/customization');
 
         // * Ensure that the 'about' link and modal render the default Site Name
-        verifySiteNameInAboutModal('Mattermost');
+        verifySiteNameInAboutModal('Wellsite');
     });
 });
 
