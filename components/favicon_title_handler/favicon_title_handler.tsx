@@ -100,7 +100,7 @@ export class FaviconTitleHandlerClass extends React.PureComponent<Props> {
                     currentChannelName = currentTeammate.display_name;
                 }
             }
-            document.title = `${mentionTitle}${unreadTitle}${currentChannelName} - ${currentTeam.display_name} ${currentSiteName}`;
+            document.title = `${mentionTitle}${unreadTitle}${currentChannelName} - ${currentTeam.display_name} Wellsite`;
         } else if (currentTeam && inGlobalThreads) {
             document.title = formatMessage({
                 id: 'globalThreads.title',
