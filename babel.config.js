@@ -1,23 +1,56 @@
-// Copyright (c) 2015-2016 Yuya Ochiai
-// Copyright (c) 2016-present Mattermost, Inc. All Rights Reserved.
+// Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
-module.exports = (api) => { // eslint-disable-line import/no-commonjs
-    api.cache.forever();
-    return {
-        presets: [
-            ['@babel/preset-env', {
-                targets: {
-                    browsers: ['Electron >= 2.0'],
-                    node: '8.9',
-                },
-            }],
-            '@babel/preset-react',
-            ['@babel/typescript', {
-                allExtensions: true,
-                isTSX: true,
-            }],
+const config = {
+    presets: [
+        ['@babel/preset-env', {
+            targets: {
+                chrome: 66,
+                firefox: 60,
+                edge: 42,
+                safari: 12,
+            },
+            modules: false,
+            corejs: 3,
+            debug: false,
+            useBuiltIns: 'usage',
+            shippedProposals: true,
+        }],
+        ['@babel/preset-react', {
+            useBuiltIns: true,
+        }],
+        ['@babel/typescript', {
+            allExtensions: true,
+            isTSX: true,
+        }],
+    ],
+    plugins: [
+        'lodash',
+        '@babel/plugin-proposal-class-properties',
+        '@babel/plugin-proposal-object-rest-spread',
+        'react-hot-loader/babel',
+        'babel-plugin-typescript-to-proptypes',
+        [
+            'babel-plugin-styled-components',
+            {
+                ssr: false,
+                fileName: false,
+            },
         ],
-        plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/plugin-proposal-class-properties'],
-    };
+    ],
 };
+
+// Jest needs module transformation
+config.env = {
+    test: {
+        presets: config.presets,
+        plugins: config.plugins,
+    },
+    production: {
+        presets: config.presets,
+        plugins: config.plugins.filter((plugin) => plugin !== 'babel-plugin-typescript-to-proptypes'),
+    },
+};
+config.env.test.presets[0][1].modules = 'auto';
+
+module.exports = config;
