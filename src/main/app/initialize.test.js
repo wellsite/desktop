@@ -71,7 +71,7 @@ jest.mock('electron-log', () => ({
 
 jest.mock('../../../electron-builder.json', () => ([
     {
-        name: 'Mattermost',
+        name: 'Wellsite',
         schemes: [
             'mattermost',
         ],

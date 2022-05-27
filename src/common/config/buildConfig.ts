@@ -19,13 +19,13 @@ import {BuildConfig} from 'types/config';
  *                                          when "enableServerManagement is set to false
  * @prop {[]} managedResources - Defines which paths are managed
  */
-const buildConfig: BuildConfig = {
-    defaultTeams: [/*
-    {
-      name: 'example',
-      url: 'https://example.com'
-    }
-  */],
+ const buildConfig: BuildConfig = {
+  defaultTeams: [
+   {
+     name: 'Wellsite',
+     url: 'https://meta.wellsite.com/'
+   }
+],
     helpLink: 'https://about.mattermost.com/default-desktop-app-documentation/',
     enableServerManagement: true,
     enableAutoUpdater: true,

@@ -64,7 +64,7 @@ describe('edit_menu', function desc() {
             // click on sint channel
             await firstServer.click('#sidebarItem_suscipit-4');
             await firstServer.click('#post_textbox');
-            await firstServer.type('#post_textbox', 'Mattermost');
+            await firstServer.type('#post_textbox', 'Wellsites');
             await firstServer.click('#post_textbox');
             await mainWindow.click('button.three-dot-menu');
             robot.keyTap('e');
@@ -76,7 +76,7 @@ describe('edit_menu', function desc() {
             robot.keyTap('e');
             robot.keyTap('r');
             const content = await firstServer.inputValue('#post_textbox');
-            content.should.be.equal('Mattermost');
+            content.should.be.equal('Wellsite');
         }
     });
 
@@ -92,7 +92,7 @@ describe('edit_menu', function desc() {
             // click on sint channel
             await firstServer.click('#sidebarItem_suscipit-4');
             await firstServer.click('#post_textbox');
-            await firstServer.type('#post_textbox', 'Mattermost');
+            await firstServer.type('#post_textbox', 'Wellsite');
             await mainWindow.click('button.three-dot-menu');
             robot.keyTap('e');
             robot.keyTap('s');
@@ -117,7 +117,7 @@ describe('edit_menu', function desc() {
             // click on sint channel
             await firstServer.click('#sidebarItem_suscipit-4');
             await firstServer.click('#post_textbox');
-            await firstServer.type('#post_textbox', 'Mattermost');
+            await firstServer.type('#post_textbox', 'Wellsite');
             await mainWindow.click('button.three-dot-menu');
             robot.keyTap('e');
             robot.keyTap('s');
@@ -132,7 +132,7 @@ describe('edit_menu', function desc() {
             robot.keyTap('p');
             robot.keyTap('enter');
             const content = await firstServer.inputValue('#post_textbox');
-            content.should.be.equal('MattermostMattermost');
+            content.should.be.equal('Wellsite');
         }
     });
 
@@ -148,7 +148,7 @@ describe('edit_menu', function desc() {
             // click on sint channel
             await firstServer.click('#sidebarItem_suscipit-4');
             await firstServer.click('#post_textbox');
-            await firstServer.type('#post_textbox', 'Mattermost');
+            await firstServer.type('#post_textbox', 'Wellsite');
             await mainWindow.click('button.three-dot-menu');
             robot.keyTap('e');
             robot.keyTap('s');
@@ -181,11 +181,11 @@ describe('edit_menu', function desc() {
         // click on sint channel
         await firstServer.click('#sidebarItem_suscipit-4');
         await firstServer.click('#post_textbox');
-        await firstServer.fill('#post_textbox', 'Mattermost');
+        await firstServer.fill('#post_textbox', 'Wellsite');
         await mainWindow.click('button.three-dot-menu');
         robot.keyTap('e');
         robot.keyTap('s');
         const channelHeaderText = await firstServer.evaluate('window.getSelection().toString()');
-        channelHeaderText.should.equal('Mattermost');
+        channelHeaderText.should.equal('Wellsite');
     });
 });

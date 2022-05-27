@@ -3,7 +3,7 @@
     "provider": "generic",
     "url": "https://releases.mattermost.com/desktop/"
   }],
-  "appId": "Mattermost.Desktop",
+  "appId": "Wellsite.Desktop",
   "artifactName": "${name}-${version}-${os}-${arch}.${ext}",
   "directories": {
     "buildResources": "src/assets",
@@ -23,7 +23,7 @@
   ],
   "protocols": [
     {
-      "name": "Mattermost",
+      "name": "Wellsite",
       "schemes": [
         "mattermost",
         "http",
@@ -37,7 +37,7 @@
   "afterPack": "scripts/afterpack.js",
   "afterSign": "scripts/notarize.js",
   "deb": {
-    "synopsis": "Mattermost Desktop App",
+    "synopsis": "Wellsite Desktop App",
     "depends": ["gconf2", "gconf-service", "libnotify4", "libxtst6", "libnss3"],
     "category": "contrib/net",
     "priority": "optional"
@@ -87,8 +87,8 @@
     "entitlements": "./entitlements.mac.plist",
     "entitlementsInherit": "./entitlements.mac.plist",
     "extendInfo": {
-      "NSMicrophoneUsageDescription": "Microphone access may be used by Mattermost plugins, such as Jitsi video conferencing.",
-      "NSCameraUsageDescription": "Camera access may be used by Mattermost plugins, such as Jitsi video conferencing.",
+      "NSMicrophoneUsageDescription": "Microphone access may be used by Wellsite plugins, such as Jitsi video conferencing.",
+      "NSCameraUsageDescription": "Camera access may be used by Wellsite plugins, such as Jitsi video conferencing.",
       "LSFileQuarantineEnabled": true
   }
   },

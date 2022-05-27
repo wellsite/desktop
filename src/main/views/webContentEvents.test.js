@@ -61,7 +61,7 @@ jest.mock('common/utils/url', () => ({
 jest.mock('../../../electron-builder.json', () => ({
     protocols: [
         {
-            name: 'Mattermost',
+            name: 'Wellsite',
             schemes: ['mattermost'],
         },
     ],

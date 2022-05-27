@@ -9,9 +9,7 @@ export type Tab = {
 
 export type Team = {
     name: string;
-    order: number;
     url: string;
-    lastActiveTab?: number;
 }
 
 export type TeamWithIndex = Team & {index: number};
