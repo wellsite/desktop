@@ -26,8 +26,8 @@ import {BuildConfig} from 'types/config';
      url: 'https://meta.wellsite.com/'
    }
 ],
-    helpLink: 'https://about.mattermost.com/default-desktop-app-documentation/',
-    enableServerManagement: true,
+    helpLink: 'https://www.wellsite.com/contact/',
+    enableServerManagement: false,
     enableAutoUpdater: true,
     managedResources: ['trusted'],
 };

@@ -121,6 +121,7 @@
       "nsis",
       "zip"
     ],
+    "icon": "file://src/assets/icon.ico",
     "extraFiles": [
       {
         "filter": [
