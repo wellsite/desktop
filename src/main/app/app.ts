@@ -3,13 +3,10 @@
 
 import {app, BrowserWindow, Event, dialog, WebContents, Certificate} from 'electron';
 import log from 'electron-log';
-
 import urlUtils from 'common/utils/url';
-
 import CertificateStore from 'main/certificateStore';
 import {destroyTray} from 'main/tray/tray';
 import WindowManager from 'main/windows/windowManager';
-
 import {getDeeplinkingURL, openDeepLink, resizeScreen} from './utils';
 
 export const certificateErrorCallbacks = new Map();

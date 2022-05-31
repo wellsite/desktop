@@ -4,16 +4,16 @@
   "version": "5.0.0-develop",
   "description": "Wellsite",
   "main": "dist/index.js",
-  "author": "Wellsite, Inc. <feedback@mattermost.com>",
+  "author": "Wellsite, Inc. <feedback@wellsite.com>",
   "license": "Apache-2.0",
   "desktopName": "Wellsite.Desktop",
-  "homepage": "https://about.mattermost.com",
+  "homepage": "https://www.wellsite.com/about",
   "engines": {
     "node": ">=4.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mattermost/desktop.git"
+    "url": "https://github.com/wellsite/desktop/tree/wellsite"
   },
   "config": {
     "target": "13.2.0",
