@@ -35,6 +35,6 @@ To contribute to the process of testing the Mattermost Desktop App:
  - Please include:
     - Operating System
     - Mattermost Desktop App version (See File Menu > Help > Version Number) 
-    - Mattermost Server version (See Mattermost Menu > About Mattermost, where Mattermost Menu can be accessed by clicking on three dots next to your profile name) 
+    - Mattermost Server version (See Mattermost Menu > About Mattermost, where Mattermost Menu can be accessed by clicking on three dots next to your profile name)
     - Clear steps to reproduce the issue
  - [See example of Desktop App issue](https://github.com/mattermost/desktop/issues/355)

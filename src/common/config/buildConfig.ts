@@ -28,7 +28,7 @@ import {BuildConfig} from 'types/config';
 ],
     helpLink: 'https://www.wellsite.com/contact/',
     enableServerManagement: false,
-    enableAutoUpdater: true,
+    enableAutoUpdater: false,
     managedResources: ['trusted'],
 };
 

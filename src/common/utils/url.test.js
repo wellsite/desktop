@@ -65,7 +65,7 @@ describe('common/utils/url', () => {
 
     describe('getHost', () => {
         it('should return the origin of a well formed url', () => {
-            const myurl = 'https://mattermost.com/download';
+            const myurl = 'https://wellsite.com/download';
             expect(urlUtils.getHost(myurl)).toBe('https://mattermost.com');
         });
 
