@@ -57,7 +57,8 @@ function UpdaterPage(props: UpdaterPageProps) {
                 <div className='pull-right'>
                     <Button
                         onClick={props.onClickCancel}
-                    >{'Cancel'}</Button>
+                    >{'Cancel'}
+                    </Button>
                 </div>
             </Navbar>
         );
