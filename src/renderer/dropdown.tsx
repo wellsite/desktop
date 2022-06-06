@@ -318,7 +318,7 @@ class TeamDropdown extends React.PureComponent<Record<string, never>, State> {
                                                         {this.isActiveTeam(team) ? <i className='icon-check'/> : <i className='icon-server-variant'/>}
                                                         <span>{team.name}</span>
                                                     </div>
-                                                    <div className='TeamDropdown__indicators'>
+                                                    {/* <div className='TeamDropdown__indicators'>
                                                         <button
                                                             className='TeamDropdown__button-edit'
                                                             onClick={this.editServer(team.name)}
@@ -334,7 +334,7 @@ class TeamDropdown extends React.PureComponent<Record<string, never>, State> {
                                                         {badgeDiv && <div className='TeamDropdown__badge'>
                                                             {badgeDiv}
                                                         </div>}
-                                                    </div>
+                                                    </div> */}
                                                 </button>
                                             )}
                                         </Draggable>
